@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Epic Games</title>
+        <style>
+            body{text-align: center;}
+        </style>
+        <script type="text/javascript">
+            function validate()
+            {
+                var username=document.myform.username.value;
+                var password=document.myform.password.value;
+                var email=document.myform.email.value;
+                var atpos = email.indexOf("@");
+                var dotpos = email.lastIndexOf(".");
+                var mobile=document.myform.mobile.value;
+                var age=document.myform.age.value;
+                var credit=document.myform.credit.value;
+
+                if (username == "" || mobile == "" || email == "" || age == "" || password == "" || credit=="" || !document.myform.trust.checked || !document.myform.terms.checked)
+                {
+                    alert("Please fill all fields !");
+                }
+                else
+                {
+                    if (username!="admin" || password!="admin")
+                    {
+                        alert("Username or password is wrong !");
+                    }
+                    else if (atpos < 1 || (dotpos - atpos) < 2) 
+                    {
+                        alert("Please enter a valid email ID !");    
+                    }
+                    else if (mobile < 1000000000 || mobile > 9999999999) 
+                    {
+                    alert("Mobile number is not valid !");               
+                    }
+                    else if (age<0)
+                    {
+                        alert("Please enter a valid age !");
+                    }
+                    else  if (age<16)
+                    {
+                        alert("Video games on this website are prohibited to children below the age of 16 !");
+                    }
+                    else
+                    {
+                        window.location.href="main.html";
+                        window.alert("Download complete !");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Fill in the details to download the file:</h3>
+        <br>
+        <img src="file.jpg" id="logo3">
+        <br>
+        <hr>
+        <br>
+
+        <form name="myform" style="font-size: 30;">
+            Username: <input type="text" name="username">
+            <br><br>
+            Password: <input type="password" name="password">
+            <br><br>
+            Email: <input type="email" name="email" class="id1">
+            <br><br>
+            Mobile Number: <input type="number" name="mobile" id="id2">
+            <br><br>
+            Age: <input type="number" name="age" class="id1">
+            <br><br>
+            Credit Card Number: <input type="password" name="credit" id="id3">
+            <br><br>
+            <label style="font-size: 30;"><input type="checkbox" name="trust" style="width:50px;">Do you trust this website ?</label>
+            <label style="font-size: 30;"><input type="checkbox" name="terms" style="width:50px;">I agree to the Terms and Conditions</label>
+            <br>
+            <br>
+            <input type="button" name="download" value="Download" onclick="validate()">
+        </form>
+    </body>
+</html>

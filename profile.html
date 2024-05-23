@@ -1,0 +1,50 @@
+
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function goBack() {
+            window.location.href="main.html";
+        }
+        function logout(){
+            window.location.href="index.html";
+        }
+    </script>
+    <style>
+        body {
+    align-items: center;
+            text-align: center;
+            font-size:45px;
+        }
+        ul {
+    list-style-type: none;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <br><br><br><br>
+        <img src="user.png" id="logo3">
+        <h1>Admin</h1>
+        <p>Level: 50</p>
+        <hr>
+
+        <h2>About</h2>
+        <p class="ss">This is a profile page.</p>
+
+ 
+        <h2>Friend List</h2>
+        <ul >
+            <li>Friend 1</li>
+            <li>Friend 2</li>
+            <li>Friend 3</li>
+        </ul>
+ 
+        <input type="button"  class="btn" onclick="goBack()" value="Back">
+        <input type="button"  class="btn" onclick="logout()" value="Logout">
+        <br><br><br><br><br><br><br><br>
+</body>
+</html>

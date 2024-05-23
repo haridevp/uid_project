@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Epic Games</title>
+        <style>
+            body{text-align: center;}
+        </style>
+        <script>
+            function retry()
+            {
+                window.location.replace("index.html");
+            }
+        </script>
+    </head>
+
+    <body>
+        <br><br><br><br><br><br><br><br>
+        <img src="logo.png" id="logo1">
+        <br><div class="content1">
+        <h1>Account Not Found</h1>
+        <h3>Check the following:</h3>
+        <ul style="list-style-type: none;color: red;">
+            <li>    Ensure that the Username and Password entered are valid</li>
+            <li>    Check if you have a stable internet connection</li>
+            <li>    Checking the proxy, firewall, and DNS configuration</li>
+        </ul></div>
+        <input type="button" name="retry" onclick="retry()" value="Try Again">
+    </body>
+</html>

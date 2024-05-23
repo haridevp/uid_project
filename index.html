@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Epic Games</title>
+        <style>
+            body {text-align: center;}
+        </style>
+        <script type="text/javascript">
+            function validate()
+            {
+            u=document.myform.username.value;
+            p=document.myform.password.value;
+            if (u=="" && p=="")
+            {
+                window.alert("Username and Password required !")
+            }
+            else if (u=="")
+            {
+                window.alert("Username required !")
+            }
+            else if (p=="")
+            {
+                window.alert("Password required !")
+            }
+            else
+            {
+            
+                if (document.myform.username.value=="admin" && document.myform.password.value=="admin")
+                {
+                    window.location.replace("main.html");
+                }
+                else
+                {
+                    window.location.replace("error.html");
+                }
+            }
+            }
+        </script>
+    </head>
+
+    <body>
+        <br><br><br><br><br><br><br><br>
+        <img src="logo.png" id="logo1">
+        <br>
+        <form name="myform">
+            Username: <input type="text" name="username">
+            <br><br>
+            Password: <input type="password" name="password">
+            <br><br>
+            <input type="button" value="Login" onclick="validate()">
+        </form>
+    </body>
+</html>
